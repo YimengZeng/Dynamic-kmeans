@@ -1,0 +1,69 @@
+==================================================================
+Functional Connectivity starts at 2019/12/26 10:53:52
+$Id: fconnect.m Tianwen Chen 2015-07-20 v2$
+==================================================================
+Current directory is: D:\matlab\SPM\spm8_scripts\Connectivity\FunctionalConnectivity\Seed_WholeBrain
+------------------------------------------------------------------
+-------------- Contents of the Parameter List --------------------
+              data_type: 'nii'
+             raw_server: '/fs/musk1'
+           non_year_dir: ''
+     participant_folder: '/fs/musk2'
+            subjectlist: 'subjectslist.txt'
+            sess_folder: 'resting_state_1'
+    preprocessed_folder: 'smoothed_spm8'
+            imagefilter: 'swar'
+                     TR: 2
+            bandpass_on: 1
+                     fl: 0.0080
+                     fh: 0.1000
+                ROI_dir: '/home/project1/scripts/roi/'
+               roi_list: ''
+               NUMTRUNC: [5 5]
+
+------------------------------------------------------------------
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ReadList', 'D:\matlab\SPM\spm8_scripts\RSA\ReadList.m', 22)" style="font-weight:bold">ReadList</a> (<a href="matlab: opentoline('D:\matlab\SPM\spm8_scripts\RSA\ReadList.m',22,0)">line 22</a>)
+Cannot find file: subjectslist.txt
+
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fconnect_wm_csf_nogs_final', 'D:\matlab\SPM\spm8_scripts\Connectivity\FunctionalConnectivity\Seed_WholeBrain\fconnect_wm_csf_nogs_final.m', 77)" style="font-weight:bold">fconnect_wm_csf_nogs_final</a> (<a href="matlab: opentoline('D:\matlab\SPM\spm8_scripts\Connectivity\FunctionalConnectivity\Seed_WholeBrain\fconnect_wm_csf_nogs_final.m',77,0)">line 77</a>)
+subjects = ReadList(subjectlist);
+} 
+paralist.ROI_dir        = '/brain/iCAN/home/Li/HMM/Config/ROI_mats';
+dir(paralist.ROI_dir)
+'/brain/iCAN/home/Li/HMM/Config/ROI_mats' not found.
+niidir = dir(paralist.ROI_dir)
+
+niidir = 
+
+0x1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    date
+    bytes
+    isdir
+    datenum
+
+paralist.ROI_dir        = '/brain/iCAN/home/Li/HMM/Config/ROI_mats'
+
+paralist = 
+
+             raw_server: '/brain/iCAN/data'
+          parent_folder: ''
+              data_type: 'nii'
+            imagefilter: 'swcar'
+          subjlist_file: {'sublist_use_25ss.txt'}
+                ROI_dir: '/brain/iCAN/home/Li/HMM/Config/ROI_mats'
+          output_folder: '/brain/iCAN_admin/home/Zeng/HMM/output_11roi/'
+               roi_list: {0x1 cell}
+           non_year_dir: ''
+            sess_folder: 'EL'
+    preprocessed_folder: 'smoothed_spm8'
+
+dir(paralist.ROI_dir)
+'/brain/iCAN/home/Li/HMM/Config/ROI_mats' not found.
+idstr = '$Id: fconnect.m Tianwen Chen 2015-07-20 v2$';
+warning('off', 'MATLAB:FINITE:obsoleteFunction')
+c     = fix(clock);
+fname = sprintf('fconnect-%d_%02d_%02d-%02d_%02d_%02.0f.log',c);
+diary(fname)
