@@ -8,27 +8,23 @@ This repository contains Matlab, Python scriptes needed to produce key results i
 MATLAB version: R2015b
 Python Version: 3.6
 Operating System: windows 10, linux centos6_x86_64
-## Behavioral data
-none (because it is resting)
+## SCL raw data
+  * preprocsss procedure for SCLs:
 ## Fmri data analysis
 
 ### Seed-based whole-brain functional connectivity from resting-state fMRI （Figure_1）
-  * 
-  * batch script in spm12:
-  data soruce:
-  script:
+  * whole-brain fc analysis
+  script: fconnect_wm_csf_nogs_final.m,fconnect_wm_csf_nogs_final_config.m
 
 ### dynamic fcuntional connectivity analysis with sliding window and k-means clustering (Figure_1)
   * sliding window analysis
   * k-means clustering
-  * clsuetr reuslt evalution
-  
+  * cluster result evalution
+  script: sliding_window_and_k_means_clustering.m (line 1---line 69)
 ### state based analysis of their temporal and spatial properties(Figure_2)
-  * correaltion analysis 
+  * correlation analysis 
   * time-lagged cross correlation analysis
-  *
+  script: sliding_window_and_k_means_clustering.m (line 70---line 209)
 ### elastic-net regression for predicting skin conductance level (Figure_3,Figure_4)
-
-  * preprocsss procedure for SCLs:
-  * elastic-net regression analysis:
-  
+  * elastic-net regression analysis
+  script: state_based_analysis.m
