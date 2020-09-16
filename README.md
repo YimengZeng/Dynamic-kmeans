@@ -33,7 +33,7 @@ MATLAB version: R2015b,R2020a  Python Version: 3.6  Operating System: windows 10
   
     script: sliding_window_and_k_means_clustering.m (line 70---line 209)
   
-  Figures in the MS: Figure.3A,3B,3C plotted by MATLAB
+    Figures in the MS: Figure.3A,3B,3C plotted by MATLAB
 ### elastic-net regression for predicting skin conductance level (Figure_3,Figure_4)
   * elastic-net regression analysis
   
