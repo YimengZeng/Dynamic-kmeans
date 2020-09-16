@@ -9,7 +9,8 @@ MATLAB version: R2015b
 Python Version: 3.6
 Operating System: windows 10, linux centos6_x86_64
 ## SCL raw data
-  * preprocsss procedure for SCLs:
+  * preprocsss procedure for SCLs
+  script: scr_preprocess.m
 
 ## Fmri data analysis
 
