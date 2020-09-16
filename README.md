@@ -1,16 +1,12 @@
 # Dynamic-kmeans
 ## Checklist for Data Analysis Conducted in the manuscript
-Lead author(s): Yimeng Zeng
-Created by Yimeng Zeng on September, 2020
+Lead author(s): Yimeng Zeng  Created by Yimeng Zeng on September, 2020
 ## Summary and Requirements:
 This repository contains Matlab, Python scriptes needed to produce key results in the manuscript including figures, statstic test, fmri data preprocess and machine learning procedure.
 ## Test Environment(s):
-MATLAB version: R2015b
-Python Version: 3.6
-Operating System: windows 10, linux centos6_x86_64
+MATLAB version: R2015b  Python Version: 3.6  Operating System: windows 10, linux centos6_x86_64
 ## SCL raw data
-  * preprocsss procedure for SCLs
-  script: scr_preprocess.m
+  * preprocsss procedure for SCLs  script: scr_preprocess.m
 
 ## Fmri data analysis
 
