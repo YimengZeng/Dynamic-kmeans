@@ -5,9 +5,9 @@
 ## Summary and Requirements:
   This repository contains Matlab, Python scriptes needed to produce key results in the manuscript including figures, statstic test, fmri data preprocess and machine learning procedure.
 ## Test Environment(s):
-MATLAB version: R2015b  Python Version: 3.6  Operating System: windows 10, linux centos6_x86_64
+MATLAB version: R2015b,R2020a  Python Version: 3.6  Operating System: windows 10, linux centos6_x86_64
 ## SCL raw data
-  * preprocsss procedure for SCLs
+  * preprocsss procedure for SCLs (conducted only on MATLAB R2020a)
   
     script: scr_preprocess.m
 
