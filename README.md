@@ -1,7 +1,9 @@
 # Dynamic-kmeans
 ## Checklist for Data Analysis Conducted in the manuscript
   Lead author(s): Yimeng Zeng
+  
   Created by Yimeng Zeng on September, 2020
+  
   Updated by Yimeng Zeng on January 14th, 2021
 ## Summary and Requirements:
   This repository contains Matlab, Python scriptes needed to produce key results in the manuscript including figures, statstic test, fmri data preprocess and machine learning procedure.
