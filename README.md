@@ -43,4 +43,5 @@ MATLAB version: R2015b,R2020a  Python Version: 3.6  Operating System: windows 10
     script: state_based_analysis.m
     
     Figures in the MS: Figure.3A,3B plotted by MATLAB; Figure.3C plotted by Python
-    Figure.4A plotted by MATLAB and Excel; Figure.4B plotted by BrainNet viewer (Xia et al., 2013)
+    
+    Figure.4A,4C plotted by MATLAB and Excel; Figure.4B,4D plotted by BrainNet viewer (Xia et al., 2013)
