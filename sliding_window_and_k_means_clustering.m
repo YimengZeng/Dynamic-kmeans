@@ -11,8 +11,9 @@ load('MGZ_target_20roi_ts.mat');
 tar_ts=data;
 clear data
 %---------------------------------------------------------------------------
-% set order parameter
+% total length of time series for each subject
 total_time_series = 235; 
+% extract specific amygdala time series, 1-6 based on roi seed names
 bla_order = 5;
 cma_order = 6;
 
@@ -22,26 +23,39 @@ movement_step= 1;
 
 window_number= (total_time_series-window_length)/movement_step+1;
 
-for n = 1:42
+for n = 1:42  % subject number 
     for i=1:window_number    
         initial_point = 1+(i-1)*movement_step;
         end_point = (i-1)*movement_step+window_length;
-            for j = 1:20
+            for j = 1:20 % total number of target roi
                 corr_bla{1,n}(i,j)=corr(seed_ts{1,n}(bla_order,initial_point:end_point)',tar_ts{1,n}(j,initial_point:end_point)','type','pearson');
                 corr_cma{1,n}(i,j)=corr(seed_ts{1,n}(cma_order,initial_point:end_point)',tar_ts{1,n}(j,initial_point:end_point)','type','pearson');
             end
     end
 end
 
+
 %% running k-means clustering with different parameter set 
 
-cluster_number_set=2;
+% compute k-means 
+% combine cma bla in subject level
+% combine all subject data into one group
+counter=1;
+for i=1:length(corr_bla)
+    for j=1:window_number
+        data(counter,:)=[corr_bla{1,i}(j,:),corr_cma{1,i}(j,:)];
+      % data(counter,:)=[corr_bla_l{1,i}(j,:),corr_cma_l{1,i}(j,:),corr_bla_r{1,i}(j,:),corr_cma_r{1,i}(j,:)];
+       counter=counter+1;
+    end
+end
+% determine maxmimum number of k-means state you want to explore
+cluster_number_set=15;
 clust = zeros(size(data,1),cluster_number_set);
 
 for i=1:cluster_number_set
 clust(:,i) = kmeans(data,i,'Display','final','MaxIter',500,'Replicates',1000);
 end
-% test for cluster quality
+% test for cluster quality, determine which state number is optimal
 eva1=evalclusters(data,clust,'CalinskiHarabasz');
 eva2=evalclusters(data,clust,'silhouette');
 % plot cluster quality
@@ -156,6 +170,8 @@ b2= mean(z_segre(:,21:40),2);
 
  lag= 20;
  % Cohort 1 98 107; Cohort 2 76 109
+ 
+ % total number of eponchs under specific time window length at 40
  window_num = 76;
  
 for j = 1:window_num
@@ -171,6 +187,7 @@ for j = 1:window_num
         clear CTLL_inte_before  CTll_inte_zero CTLL_inte_after CTLL_result a11 a22
 end
 
+ % total number of eponchs under specific time window length at 40
 window_num = 109;
 for j = 1:window_num
     b11 = b1(1+(40)*(j-1):(40*j));
